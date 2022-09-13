@@ -16,6 +16,7 @@ body {
 	box-shadow: 0 0 2px 1px rgb(0, 0, 0);
 	margin: 20px 0;
 	padding: 10px;
+	border-radius: 20px;
 }
 
 .form__title {
@@ -23,12 +24,20 @@ body {
 	flex-basis: 100%;
 	text-align: center;
 	margin-bottom: 30px;
+	border-radius: 20px;
 }
 .form__input {
 	padding: 10px 20px;
 	font-size: 16px;
 	flex-basis: 40%;
 	margin: 5px 10px;
+	border-radius: 20px;
+}
+.form__input:hover {
+	background-color: rgb(108, 214, 214);
+}
+.form__input:focus {
+	background-color: rgb(127, 224, 187);
 }
 .form__button {
 	margin: 30px;
@@ -38,12 +47,30 @@ body {
 	text-transform: uppercase;
 	flex-basis: 60%;
 	cursor: pointer;
+	border-radius: 20px;
+}
+.form__button:hover {
+	background-color: aqua;
 }
 .result,
 .content,
 .footer {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+.result {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+}
+.result__info {
+	grid-column: 1/4;
+	text-align: center;
+}
+.result__info-description {
+}
+.content {
+	display: grid;
 }
 .footer {
 	background-color: black;
@@ -52,4 +79,23 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 20px;
+}
+
+.github_button_icon {
+	margin-top: 10px;
+	margin-right: 10px;
+	background-color: black;
+	color: white;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	border-radius: 50%;
+}
+.github_button_icon:hover {
+	transform: scale(1.3);
+	transition: 0.4s;
+	color: aqua;
 }
